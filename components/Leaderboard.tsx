@@ -22,8 +22,13 @@ export const Leaderboard: React.FC<LeaderboardProps> = ({ list, newEntry }) => {
             s.on("updateLeaderboard", (data: LeaderboardType) => {
                 setLeaderboardList((oldList) => {
                     const newList = [...oldList];
-                    newList.pop();
+
+                    if (newList.length === 8) {
+                        newList.pop();
+                    }
+
                     newList.unshift(data);
+
                     return newList;
                 });
             });
