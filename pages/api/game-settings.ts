@@ -9,7 +9,9 @@ export default async function gameSettingsHandler(
 ) {
     await dbConnect();
 
-    const data: IGameSettings[] = await GameSettings.find({});
+    const data: IGameSettings[] = await GameSettings.find({}).sort(
+        "fieldCount"
+    );
 
     res.status(200);
     res.setHeader("Content-Type", "application/json");

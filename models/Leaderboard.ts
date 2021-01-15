@@ -1,8 +1,15 @@
 import mongoose, { Schema, Document } from "mongoose";
 
+export type LeaderboardType = {
+    _id: string;
+    name: string;
+    date: number;
+    score: number;
+};
+
 export interface ILeaderboard extends Document {
     name: string;
-    date: Date;
+    date: number;
     score: number;
 }
 
