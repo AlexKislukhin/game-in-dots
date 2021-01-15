@@ -18,3 +18,5 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 -   NEXT_PUBLIC_API_URL - Absolute URL of the server.
 
 **To create default game settings in database, run `npm run populateGameSettings`**
+
+**This project is also deployed on [Heroku](https://kislukhin-game-in-dots.herokuapp.com/)**
