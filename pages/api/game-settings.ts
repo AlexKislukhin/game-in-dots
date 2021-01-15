@@ -15,5 +15,15 @@ export default async function gameSettingsHandler(
 
     res.status(200);
     res.setHeader("Content-Type", "application/json");
-    res.end(JSON.stringify(data));
+    res.end(
+        JSON.stringify(
+            data.map(({ _id, name, fieldCount, delay, multiplier }) => ({
+                _id,
+                name,
+                fieldCount,
+                delay,
+                multiplier,
+            }))
+        )
+    );
 }
